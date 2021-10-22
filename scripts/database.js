@@ -1,4 +1,4 @@
-const cars = {
+const database = {
     paintColors: [
         {
             id: 1, 
