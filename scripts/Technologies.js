@@ -1,7 +1,13 @@
-import { getTechnologies } from "./database";
+import { getTechnologies } from "./database.js";
 
-// const technologies = getTechnologies()
+const technologies = getTechnologies()
 
-export const Technologies = () => {
-    return `<h2>Technologies</h2>`
+export const TechnologiesHTML = () => {
+    let html = "<ul>"
+
+    for (const technology of technologies) {
+        html += `<li id="technology">${technology.package}</li>`
+    }
+    html += "</ul>"
+    return html
 }
